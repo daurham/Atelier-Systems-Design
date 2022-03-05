@@ -1,0 +1,36 @@
+
+  {
+    "Date": "Fri Mar 04 2022 23:04:31",
+    "Enpoint": "/reviews/",
+    "ExecutionTime": "23192.921966 ms",
+  }
+
+  {
+    "Date": "Fri Mar 04 2022 23:04:29",
+    "Enpoint": "/reviews/",
+    "ExecutionTime": "21876.693383 ms",
+  }
+
+  {
+    "Date": "Fri Mar 04 2022 23:04:28",
+    "Enpoint": "/reviews/",
+    "ExecutionTime": "20763.046751 ms",
+  }
+
+  {
+    "Date": "Fri Mar 04 2022 23:04:20",
+    "Enpoint": "/reviews/meta",
+    "ExecutionTime": "12666.230725000001 ms",
+  }
+
+  {
+    "Date": "Fri Mar 04 2022 23:04:18",
+    "Enpoint": "/reviews/meta",
+    "ExecutionTime": "10813.942289 ms",
+  }
+
+  {
+    "Date": "Fri Mar 04 2022 23:04:11",
+    "Enpoint": "/reviews/meta",
+    "ExecutionTime": "3702.535847 ms",
+  }

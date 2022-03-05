@@ -33,3 +33,6 @@
 
 # Directories
 csvFiles
+node_modules
+# Files
+config.js

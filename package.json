@@ -1,0 +1,30 @@
+{
+  "name": "sdc-jake-ratings-reviews",
+  "version": "1.0.0",
+  "description": "Replace the previously provided, underperforming API used for the FEC Project.  Rebuild a service within the API from scratch, focusing on optimizing performance and accommodating web traffic.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon serverAPI/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wario-SDC/SDC-Jake-Ratings-Reviews.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wario-SDC/SDC-Jake-Ratings-Reviews/issues"
+  },
+  "homepage": "https://github.com/Wario-SDC/SDC-Jake-Ratings-Reviews#readme",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "csv": "^6.0.5",
+    "express": "^4.17.3",
+    "jsdom": "^19.0.0",
+    "mongodb": "^4.4.0",
+    "mongoose": "^6.2.4",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.3"
+  }
+}
