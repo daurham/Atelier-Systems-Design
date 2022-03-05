@@ -11,8 +11,8 @@ app.use(express.urlencoded({ extended: true }))
 
 const { JSDOM } = require("jsdom");
 const { window } = new JSDOM();
-var start = window.performance.now();
-
+let start;
+let end;
 
 const { Pool } = require('pg')
 const pool = new Pool({
@@ -29,10 +29,12 @@ const pool = new Pool({
 const model = (id, endpoint, callback) => {
   let queryStr;
   if (endpoint.indexOf('meta') > -1) {
-    queryStr = 'SELECT * FROM product WHERE id = $1 limit 3';
+    queryStr = `explain (analyze, timing, format json) SELECT * FROM reviews WHERE id = $1 limit 3`;
   } else {
-    queryStr = 'SELECT * FROM reviews WHERE id = $1 limit 3';
+    queryStr = `
+    explain (analyze, timing, format json) SELECT * FROM reviews WHERE id = $1 limit 3`;
   }
+  start = window.performance.now();
     pool.query(queryStr, [id], (err, data) => {
       callback(err, data, endpoint);
     })
@@ -44,13 +46,13 @@ const controller = (req, res, endpoint) => {
       console.log('Err:', err);
       res.sendStatus(500);
     } else {
-      res.status(200).send(result.rows);
+      end = window.performance.now();
+      recordTime(`
+      "Enpoint": "${endpoint}",
+      "ExecutionTime": "${end - start} ms"
+      `, result.rows);
+      res.status(200).send(result);
     }
-    var end = window.performance.now();
-
-    recordTime(`
-    "Enpoint": "${endpoint}",
-    "ExecutionTime": "${end - start} ms"`);
   })
 };
 

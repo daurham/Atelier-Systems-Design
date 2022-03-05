@@ -51,7 +51,7 @@ COPY characteristic_reviews FROM '/home/daurham/hackreactor/SDC/SDC-Jake-Ratings
 COPY characteristics FROM '/home/daurham/hackreactor/SDC/SDC-Jake-Ratings-Reviews/csvFiles/characteristics.csv' DELIMITER ',' CSV HEADER;
 COPY product FROM '/home/daurham/hackreactor/SDC/SDC-Jake-Ratings-Reviews/csvFiles/product.csv' DELIMITER ',' CSV HEADER;
 
-explain (analyze) select * from reviews where id=1 limit 5;
+-- explain (analyze) select * from reviews where id=1 limit 5;
 
 -- Set the count of all recommend trues into recommended table true_ col
 -- Set the count of all recommend falses into recommended table false_ col

@@ -1,11 +1,789 @@
 
   {
-    "Date": "Fri Mar 04 2022 23:04:31",
-    "Enpoint": "/reviews/",
-    "ExecutionTime": "23192.921966 ms",
+    "Date": "Sat-Mar-05-2022-14:13:35",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "12.19780499999979 ms"
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Limit",
+          "Parallel Aware": false,
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.011,
+          "Actual Total Time": 0.011,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Plans": [
+            {
+              "Node Type": "Index Scan",
+              "Parent Relationship": "Outer",
+              "Parallel Aware": false,
+              "Scan Direction": "Forward",
+              "Index Name": "reviews_pkey",
+              "Relation Name": "reviews",
+              "Alias": "reviews",
+              "Startup Cost": 0.42,
+              "Total Cost": 8.44,
+              "Plan Rows": 1,
+              "Plan Width": 315,
+              "Actual Startup Time": 0.01,
+              "Actual Total Time": 0.01,
+              "Actual Rows": 1,
+              "Actual Loops": 1,
+              "Index Cond": "(id = 3)",
+              "Rows Removed by Index Recheck": 0
+            }
+          ]
+        },
+        "Planning Time": 0.331,
+        "Triggers": [],
+        "Execution Time": 0.048
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sat-Mar-05-2022-14:13:24",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "24.85335299999997 ms"
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Limit",
+          "Parallel Aware": false,
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.018,
+          "Actual Total Time": 0.019,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Plans": [
+            {
+              "Node Type": "Index Scan",
+              "Parent Relationship": "Outer",
+              "Parallel Aware": false,
+              "Scan Direction": "Forward",
+              "Index Name": "reviews_pkey",
+              "Relation Name": "reviews",
+              "Alias": "reviews",
+              "Startup Cost": 0.42,
+              "Total Cost": 8.44,
+              "Plan Rows": 1,
+              "Plan Width": 315,
+              "Actual Startup Time": 0.017,
+              "Actual Total Time": 0.018,
+              "Actual Rows": 1,
+              "Actual Loops": 1,
+              "Index Cond": "(id = 3)",
+              "Rows Removed by Index Recheck": 0
+            }
+          ]
+        },
+        "Planning Time": 0.584,
+        "Triggers": [],
+        "Execution Time": 0.053
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sat-Mar-05-2022-14:12:08",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "13.644973000000391 ms"
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Limit",
+          "Parallel Aware": false,
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.012,
+          "Actual Total Time": 0.013,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Plans": [
+            {
+              "Node Type": "Index Scan",
+              "Parent Relationship": "Outer",
+              "Parallel Aware": false,
+              "Scan Direction": "Forward",
+              "Index Name": "reviews_pkey",
+              "Relation Name": "reviews",
+              "Alias": "reviews",
+              "Startup Cost": 0.42,
+              "Total Cost": 8.44,
+              "Plan Rows": 1,
+              "Plan Width": 315,
+              "Actual Startup Time": 0.011,
+              "Actual Total Time": 0.012,
+              "Actual Rows": 1,
+              "Actual Loops": 1,
+              "Index Cond": "(id = 3)",
+              "Rows Removed by Index Recheck": 0
+            }
+          ]
+        },
+        "Planning Time": 0.324,
+        "Triggers": [],
+        "Execution Time": 0.039
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sat-Mar-05-2022-14:11:51",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "22.6831880000002 ms"
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Limit",
+          "Parallel Aware": false,
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.01,
+          "Actual Total Time": 0.011,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Plans": [
+            {
+              "Node Type": "Index Scan",
+              "Parent Relationship": "Outer",
+              "Parallel Aware": false,
+              "Scan Direction": "Forward",
+              "Index Name": "reviews_pkey",
+              "Relation Name": "reviews",
+              "Alias": "reviews",
+              "Startup Cost": 0.42,
+              "Total Cost": 8.44,
+              "Plan Rows": 1,
+              "Plan Width": 315,
+              "Actual Startup Time": 0.009,
+              "Actual Total Time": 0.01,
+              "Actual Rows": 1,
+              "Actual Loops": 1,
+              "Index Cond": "(id = 3)",
+              "Rows Removed by Index Recheck": 0
+            }
+          ]
+        },
+        "Planning Time": 0.328,
+        "Triggers": [],
+        "Execution Time": 0.035
+      }
+    ]
+  }
+]
+
+    "Date": "Sat-Mar-05-2022-14:11:24",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "12.851611000000048 ms"
+      ,[object Object]
   }
 
-  {
+    "Date": "Sat-Mar-05-2022-14:11:19",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "20.88019699999859 ms"
+      ,[object Object]
+  }
+
+    "Date": "Sat-Mar-05-2022-14:10:11",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "14.89839000000029 ms"
+      ,{
+  "Sat-Mar-05-2022-14:10:03": [
+    {
+      "QUERY PLAN": [
+        {
+          "Plan": {
+            "Node Type": "Limit",
+            "Parallel Aware": false,
+            "Startup Cost": 0.42,
+            "Total Cost": 8.44,
+            "Plan Rows": 1,
+            "Plan Width": 315,
+            "Actual Startup Time": 0.01,
+            "Actual Total Time": 0.011,
+            "Actual Rows": 1,
+            "Actual Loops": 1,
+            "Plans": [
+              {
+                "Node Type": "Index Scan",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Scan Direction": "Forward",
+                "Index Name": "reviews_pkey",
+                "Relation Name": "reviews",
+                "Alias": "reviews",
+                "Startup Cost": 0.42,
+                "Total Cost": 8.44,
+                "Plan Rows": 1,
+                "Plan Width": 315,
+                "Actual Startup Time": 0.01,
+                "Actual Total Time": 0.01,
+                "Actual Rows": 1,
+                "Actual Loops": 1,
+                "Index Cond": "(id = 3)",
+                "Rows Removed by Index Recheck": 0
+              }
+            ]
+          },
+          "Planning Time": 0.303,
+          "Triggers": [],
+          "Execution Time": 0.036
+        }
+      ]
+    }
+  ]
+}
+  }
+
+    "Date": "Sat-Mar-05-2022-14:10:06",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "22.185778000000028 ms"
+      ,{
+  "Sat-Mar-05-2022-14:10:03": [
+    {
+      "QUERY PLAN": [
+        {
+          "Plan": {
+            "Node Type": "Limit",
+            "Parallel Aware": false,
+            "Startup Cost": 0.42,
+            "Total Cost": 8.44,
+            "Plan Rows": 1,
+            "Plan Width": 315,
+            "Actual Startup Time": 0.01,
+            "Actual Total Time": 0.011,
+            "Actual Rows": 1,
+            "Actual Loops": 1,
+            "Plans": [
+              {
+                "Node Type": "Index Scan",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Scan Direction": "Forward",
+                "Index Name": "reviews_pkey",
+                "Relation Name": "reviews",
+                "Alias": "reviews",
+                "Startup Cost": 0.42,
+                "Total Cost": 8.44,
+                "Plan Rows": 1,
+                "Plan Width": 315,
+                "Actual Startup Time": 0.01,
+                "Actual Total Time": 0.01,
+                "Actual Rows": 1,
+                "Actual Loops": 1,
+                "Index Cond": "(id = 3)",
+                "Rows Removed by Index Recheck": 0
+              }
+            ]
+          },
+          "Planning Time": 0.303,
+          "Triggers": [],
+          "Execution Time": 0.036
+        }
+      ]
+    }
+  ]
+}
+  }
+
+    "Date": "Sat-Mar-05-2022-14:10:03",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "14.579510999999911 ms"
+      ,
+  }
+
+    "Date": "Sat-Mar-05-2022-14:06:59",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "23.21994100000029 ms"
+      ,{
+  "Sat-Mar-05-2022-14:06:54": [
+    {
+      "QUERY PLAN": [
+        {
+          "Plan": {
+            "Node Type": "Limit",
+            "Parallel Aware": false,
+            "Startup Cost": 0.42,
+            "Total Cost": 8.44,
+            "Plan Rows": 1,
+            "Plan Width": 315,
+            "Actual Startup Time": 0.01,
+            "Actual Total Time": 0.011,
+            "Actual Rows": 1,
+            "Actual Loops": 1,
+            "Plans": [
+              {
+                "Node Type": "Index Scan",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Scan Direction": "Forward",
+                "Index Name": "reviews_pkey",
+                "Relation Name": "reviews",
+                "Alias": "reviews",
+                "Startup Cost": 0.42,
+                "Total Cost": 8.44,
+                "Plan Rows": 1,
+                "Plan Width": 315,
+                "Actual Startup Time": 0.01,
+                "Actual Total Time": 0.01,
+                "Actual Rows": 1,
+                "Actual Loops": 1,
+                "Index Cond": "(id = 3)",
+                "Rows Removed by Index Recheck": 0
+              }
+            ]
+          },
+          "Planning Time": 0.313,
+          "Triggers": [],
+          "Execution Time": 0.035
+        }
+      ]
+    }
+  ]
+}
+  }
+
+    "Date": "Sat-Mar-05-2022-14:06:54",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "12.817847999999685 ms"
+      ,
+  }
+    "Date": "Sat-Mar-05-2022-14:04:48",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "17.61316099999999 ms"
+      ,{
+  "Sat-Mar-05-2022-14:04:46": [
+    {
+      "QUERY PLAN": [
+        {
+          "Plan": {
+            "Node Type": "Limit",
+            "Parallel Aware": false,
+            "Startup Cost": 0.42,
+            "Total Cost": 8.44,
+            "Plan Rows": 1,
+            "Plan Width": 315,
+            "Actual Startup Time": 0.01,
+            "Actual Total Time": 0.011,
+            "Actual Rows": 1,
+            "Actual Loops": 1,
+            "Plans": [
+              {
+                "Node Type": "Index Scan",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Scan Direction": "Forward",
+                "Index Name": "reviews_pkey",
+                "Relation Name": "reviews",
+                "Alias": "reviews",
+                "Startup Cost": 0.42,
+                "Total Cost": 8.44,
+                "Plan Rows": 1,
+                "Plan Width": 315,
+                "Actual Startup Time": 0.01,
+                "Actual Total Time": 0.01,
+                "Actual Rows": 1,
+                "Actual Loops": 1,
+                "Index Cond": "(id = 3)",
+                "Rows Removed by Index Recheck": 0
+              }
+            ]
+          },
+          "Planning Time": 0.311,
+          "Triggers": [],
+          "Execution Time": 0.036
+        }
+      ]
+    }
+  ]
+}
+  }
+
+    "Date": "Sat-Mar-05-2022-14:04:46",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "14.11551499999996 ms"
+      ,
+  }
+
+    "Date": "Sat-Mar-05-2022-14:03:44",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "16.447822000000087 ms"
+      ,{
+  "Sat-Mar-05-2022-14:03:37": [
+    {
+      "QUERY PLAN": [
+        {
+          "Plan": {
+            "Node Type": "Limit",
+            "Parallel Aware": false,
+            "Startup Cost": 0.42,
+            "Total Cost": 8.44,
+            "Plan Rows": 1,
+            "Plan Width": 315,
+            "Actual Startup Time": 0.014,
+            "Actual Total Time": 0.015,
+            "Actual Rows": 1,
+            "Actual Loops": 1,
+            "Plans": [
+              {
+                "Node Type": "Index Scan",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Scan Direction": "Forward",
+                "Index Name": "reviews_pkey",
+                "Relation Name": "reviews",
+                "Alias": "reviews",
+                "Startup Cost": 0.42,
+                "Total Cost": 8.44,
+                "Plan Rows": 1,
+                "Plan Width": 315,
+                "Actual Startup Time": 0.013,
+                "Actual Total Time": 0.014,
+                "Actual Rows": 1,
+                "Actual Loops": 1,
+                "Index Cond": "(id = 3)",
+                "Rows Removed by Index Recheck": 0
+              }
+            ]
+          },
+          "Planning Time": 0.381,
+          "Triggers": [],
+          "Execution Time": 0.045
+        }
+      ]
+    }
+  ]
+}
+  }
+
+    "Date": "Sat-Mar-05-2022-14:03:37",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "14.115399999999681 ms"
+      ,
+  }
+    "Date": "Sat-Mar-05-2022-13:58:55",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "13.654485999999906 ms"
+      ,{
+  "Sat-Mar-05-2022-12:59:00": [
+    {
+      "QUERY PLAN": [
+        {
+          "Plan": {
+            "Node Type": "Limit",
+            "Parallel Aware": false,
+            "Startup Cost": 0.42,
+            "Total Cost": 8.44,
+            "Plan Rows": 1,
+            "Plan Width": 315,
+            "Actual Startup Time": 0.011,
+            "Actual Total Time": 0.012,
+            "Actual Rows": 1,
+            "Actual Loops": 1,
+            "Plans": [
+              {
+                "Node Type": "Index Scan",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Scan Direction": "Forward",
+                "Index Name": "reviews_pkey",
+                "Relation Name": "reviews",
+                "Alias": "reviews",
+                "Startup Cost": 0.42,
+                "Total Cost": 8.44,
+                "Plan Rows": 1,
+                "Plan Width": 315,
+                "Actual Startup Time": 0.01,
+                "Actual Total Time": 0.011,
+                "Actual Rows": 1,
+                "Actual Loops": 1,
+                "Index Cond": "(id = 3)",
+                "Rows Removed by Index Recheck": 0
+              }
+            ]
+          },
+          "Planning Time": 0.324,
+          "Triggers": [],
+          "Execution Time": 0.038
+        }
+      ]
+    }
+  ]
+}
+  }
+
+    "Date": "Sat-Mar-05-2022-12:59:00",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "13.167252000001099 ms"
+
+  }
+
+    "Date": "Sat-Mar-05-2022-12:57:02",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "13.040910000000167 ms"
+
+  }
+
+    "Date": "Sat-Mar-05-2022-12:55:25",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "26.024539999999888 ms"
+
+  }
+
+    "Date": "Sat-Mar-05-2022-12:54:14",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "21.352638000000297 ms"
+
+  }
+
+    "Date": "Sat-Mar-05-2022-12:50:28",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "26.951677999999447 ms"
+
+  }
+
+    "Date": "Sat-Mar-05-2022-12:48:58",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "16.131659000000127 ms"
+
+  }
+
+    "Date": "Sat-Mar-05-2022-12:48:24",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "12.318347000000017 ms"
+
+  }
+
+    "Date": "Sat-Mar-05-2022-12:48:23",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "12.470037000000048 ms"
+
+  }
+
+    "Date": "Sat-Mar-05-2022-12:48:18",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "12.783534999999802 ms"
+
+  }
+
+    "Date": "Sat-Mar-05-2022-12:47:58",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "11.739068999999972 ms"
+
+  }
+
+    "Date": "Sat-Mar-05-2022-12:47:50",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "14.127211999999872 ms"
+
+  }
+
+    "Date": "Sat-Mar-05-2022-12:44:37",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "13.221041000000241 ms"
+
+  }
+
+    "Date": "Sat-Mar-05-2022-12:44:34",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "12.507456000000047 ms"
+
+  }
+
+    "Date": "Sat-Mar-05-2022-12:44:03",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "21.228443999999854 ms"
+
+  }
+
+    "Date": "Sat-Mar-05-2022-12:43:59",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "15.600059000000101 ms"
+
+  }
+
+    "Date": "Sat-Mar-05-2022-12:43:55",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "14.30755199999976 ms"
+
+  }
+
+    "Date": "Sat-Mar-05-2022-12:43:23",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "14.261694999999918 ms"
+
+  }
+
+    "Date": "Sat-Mar-05-2022-12:37:31",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "18.916958999999906 ms"
+
+  }
+
+    "Date": "Sat Mar 05 2022 12:30:01",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "12.40463600000021 ms"
+
+  }
+
+    "Date": "Sat Mar 05 2022 12:20:55",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "14.293539999999894 ms"
+
+  }
+
+    "Date": "Sat Mar 05 2022 11:52:53",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "23.085477999999966 ms"
+
+  }
+
+    "Date": "Sat Mar 05 2022 11:52:02",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "11.96885199999997 ms"
+
+  }
+
+    "Date": "Sat Mar 05 2022 11:49:09",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "13.607924999998431 ms"
+
+  }
+
+    "Date": "Sat Mar 05 2022 11:48:52",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "14.118001000000277 ms"
+
+  }
+
+    "Date": "Sat Mar 05 2022 11:48:25",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "12.571093000000019 ms"
+
+  }
+
+    "Date": "Sat Mar 05 2022 11:28:09",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "13.321897000001627 ms"
+
+  }
+
+    "Date": "Sat Mar 05 2022 11:27:19",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "11.484885000000077 ms"
+
+  }
+
+    "Date": "Sat Mar 05 2022 11:27:01",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "12.692215999999917 ms"
+
+  }
+
+    "Date": "Sat Mar 05 2022 11:26:25",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "12.947713000000249 ms"
+
+  }
+
+    "Date": "Sat Mar 05 2022 11:25:48",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "16.80045300000006 ms"
+
+  }
+
+    "Date": "Sat Mar 05 2022 11:23:20",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "12.800185000000056 ms"
+      "PSQL-Data": [{"QUERY PLAN":[{"Plan":{"Node Type":"Limit","Parallel Aware":false,"Startup Cost":0.42,"Total Cost":8.44,"Plan Rows":1,"Plan Width":315,"Actual Startup Time":0.012,"Actual Total Time":0.013,"Actual Rows":1,"Actual Loops":1,"Plans":[{"Node Type":"Index Scan","Parent Relationship":"Outer","Parallel Aware":false,"Scan Direction":"Forward","Index Name":"reviews_pkey","Relation Name":"reviews","Alias":"reviews","Startup Cost":0.42,"Total Cost":8.44,"Plan Rows":1,"Plan Width":315,"Actual Startup Time":0.011,"Actual Total Time":0.011,"Actual Rows":1,"Actual Loops":1,"Index Cond":"(id = 3)","Rows Removed by Index Recheck":0}]},"Planning Time":0.323,"Triggers":[],"Execution Time":0.037}]}]
+  }
+
+    "Date": "Sat Mar 05 2022 11:22:36",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "13.454692000000023 ms"
+      "PSQL-Data": [{"QUERY PLAN":[{"Plan":{"Node Type":"Limit","Parallel Aware":false,"Startup Cost":0.42,"Total Cost":8.44,"Plan Rows":1,"Plan Width":315,"Actual Startup Time":0.011,"Actual Total Time":0.012,"Actual Rows":1,"Actual Loops":1,"Plans":[{"Node Type":"Index Scan","Parent Relationship":"Outer","Parallel Aware":false,"Scan Direction":"Forward","Index Name":"reviews_pkey","Relation Name":"reviews","Alias":"reviews","Startup Cost":0.42,"Total Cost":8.44,"Plan Rows":1,"Plan Width":315,"Actual Startup Time":0.01,"Actual Total Time":0.01,"Actual Rows":1,"Actual Loops":1,"Index Cond":"(id = 3)","Rows Removed by Index Recheck":0}]},"Planning Time":0.352,"Triggers":[],"Execution Time":0.036}]}]
+  }
+
+    "Date": "Sat Mar 05 2022 11:21:57",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "13.11012699999992 ms"
+      "PSQL-Data": [{"QUERY PLAN":[{"Plan":{"Node Type":"Limit","Parallel Aware":false,"Startup Cost":0.42,"Total Cost":8.44,"Plan Rows":1,"Plan Width":315,"Actual Startup Time":0.013,"Actual Total Time":0.014,"Actual Rows":1,"Actual Loops":1,"Plans":[{"Node Type":"Index Scan","Parent Relationship":"Outer","Parallel Aware":false,"Scan Direction":"Forward","Index Name":"reviews_pkey","Relation Name":"reviews","Alias":"reviews","Startup Cost":0.42,"Total Cost":8.44,"Plan Rows":1,"Plan Width":315,"Actual Startup Time":0.012,"Actual Total Time":0.013,"Actual Rows":1,"Actual Loops":1,"Index Cond":"(id = 3)","Rows Removed by Index Recheck":0}]},"Planning Time":0.424,"Triggers":[],"Execution Time":0.042}]}]
+  }
+
+    "Date": "Sat Mar 05 2022 11:20:56",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "14.10375600000043 ms"
+      "PSQL-Data": [{"QUERY PLAN":[{"Plan":{"Node Type":"Limit","Parallel Aware":false,"Startup Cost":0.42,"Total Cost":8.44,"Plan Rows":1,"Plan Width":315,"Actual Startup Time":0.012,"Actual Total Time":0.013,"Actual Rows":1,"Actual Loops":1,"Plans":[{"Node Type":"Index Scan","Parent Relationship":"Outer","Parallel Aware":false,"Scan Direction":"Forward","Index Name":"reviews_pkey","Relation Name":"reviews","Alias":"reviews","Startup Cost":0.42,"Total Cost":8.44,"Plan Rows":1,"Plan Width":315,"Actual Startup Time":0.011,"Actual Total Time":0.011,"Actual Rows":1,"Actual Loops":1,"Index Cond":"(id = 3)","Rows Removed by Index Recheck":0}]},"Planning Time":0.36,"Triggers":[],"Execution Time":0.037}]}]
+  }
+
+    "Date": "Sat Mar 05 2022 11:11:09",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "21.25436400000035 ms"
+  }
+
+    "Date": "Sat Mar 05 2022 11:06:30",
+    "Enpoint": "/reviews/",
+    "ExecutionTime": "NaN ms"
+  }
+
+    "Date": "Sat Mar 05 2022 10:34:23",
+    "Enpoint": "/reviews/",
+    "ExecutionTime": "21.623915000000125 ms"
+  }
+
+    "Date": "Sat Mar 05 2022 10:25:16",
+    "Enpoint": "/reviews/",
+    "ExecutionTime": "1.1856760000009672 ms"
+  }
+
+    "Date": "Sat Mar 05 2022 10:25:07",
+    "Enpoint": "/reviews/",
+    "ExecutionTime": "1.7599430000009306 ms"
+  }
+
+    "Date": "Sat Mar 05 2022 10:25:04",
+    "Enpoint": "/reviews/",
+    "ExecutionTime": "11.866180000000895 ms"
+  }
+
+    "Date": "Sat Mar 05 2022 10:23:47",
+    "Enpoint": "/reviews/",
+    "ExecutionTime": "14.826656999999614 ms"null
+  }
+
+    "Date": "Sat Mar 05 2022 10:01:59",
+    "Enpoint": "/reviews/",
+    "ExecutionTime": "9581.286291999999 ms"null
+  }
+
+    "Date": "Sat Mar 05 2022 10:01:57",
+    "Enpoint": "/reviews/",
+    "ExecutionTime": "7983.181198 ms"null
+  }
+
     "Date": "Fri Mar 04 2022 23:04:29",
     "Enpoint": "/reviews/",
     "ExecutionTime": "21876.693383 ms",
@@ -34,3 +812,67 @@
     "Enpoint": "/reviews/meta",
     "ExecutionTime": "3702.535847 ms",
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  

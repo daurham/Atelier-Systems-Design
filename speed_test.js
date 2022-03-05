@@ -1,48 +1,66 @@
 const fs = require('fs');
 const file = 'speed_records.txt';
-const file2 = 'speed_records.json';
+const JSONfile = 'speed_records.json';
 // const run = require('./serverAPI/index.js');
 
 // Speed tesing function
 function readData(cb) {
-  fs.readFile(file, (err, fileData) => {
+  fs.readFile(file, (err, txtFileData) => {
     if (err) {
       cb(err);
     } else {
-      cb(null, fileData);
+      fs.readFile(JSONfile, (err, JSONFileData) => {
+        if (err) {
+          cb(err);
+        } else {
+          cb(null, txtFileData, JSONFileData);
+        }
+      });
     }
   });
 };
 
-const logData = (oldData, newData) => {
-  let d = new Date().toString().slice(0, -34);
+const logData = (oldData, oldJSONdata, newData, newPsqlRecords) => {
+  let d = (new Date().toString().slice(0, -34)).replace(/\s/g, '-');
   oldData = oldData.toString();
-  // let count = oldData.slice(3, 4) || 0;
-  // console.log(count) // "Test#": "${count}",\n // congifure a count.
-  console.log(oldData.slice(-5));
+  oldJSONdata = oldJSONdata.toString();
+  let body = `"${d}": ${JSON.stringify(newPsqlRecords)}`;
+  if (!oldJSONdata) {
+    body = JSON.parse('{' + body + '}');
+  } else {
+    body = JSON.parse(oldJSONdata);
+    body[d] = newPsqlRecords;
+  }
+
   let mergedData = `
   {
-    "Date": "${d}",${newData}${!oldData?',':null}
-  ${oldData.slice(4, oldData.length) || '}' }`;
-  fs.writeFile(file, JSON.parse(JSON.stringify(mergedData)), (err, finalData) => {
-  // let mergedData = `
-  // {
-  //   "Date": "${d}",${newData}
-  // ${oldData.slice(4, oldData.length) || '}' }`;
-  // fs.writeFile(file, JSON.parse(JSON.stringify(mergedData)), (err, finalData) => {
-  if (err) {
-      console.log('ERR');
+    "Date": "${d}",${newData},${JSON.stringify(newPsqlRecords, null, 2)}
+  }
+  ${oldData.slice(4, oldData.length)}
+  `;
+
+  fs.writeFile(file, mergedData.toString(), (err, finalData) => {
+    if (err) {
+      console.log('fs.writeFile ERR: ', err);
     }
-    console.log('Recorded new data!');
+    console.log('Recorded new txt data!');
+    fs.writeFile(JSONfile, JSON.stringify(body, null, 2), (err, finalData) => {
+      if (err) {
+        console.log('fs.writeFile ERR: ', err);
+      } else {
+        console.log('Recorded new JSON data!');
+      }
+    })
   })
 };
 
-module.exports = runRecordKepper = (newRecords) => {
-  readData((err, fileData) => {
-  if (err) {
-    console.log('Record Err: ', err);
-  } else {
-    logData(fileData, newRecords);
-  }
-});
+module.exports = runRecordKepper = (newRecords, newPsqlRecords) => {
+  readData((err, txtFileData, JSONFileData) => {
+    if (err) {
+      console.log('[function] "readData" ERROR: ', err);
+    } else {
+      // console.log(JSON.stringify(psqlRecords));
+      logData(txtFileData, JSONFileData, newRecords, newPsqlRecords);
+    }
+  });
 };
