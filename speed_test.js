@@ -34,7 +34,7 @@ const logData = (oldData, oldJSONdata, newData, newPsqlRecords) => {
 
   let mergedData = `
   {
-    "Date": "${d}",${newData},${JSON.stringify(newPsqlRecords, null, 2)}
+    "Date": "${d}",${newData}
   }
   ${oldData.slice(4, oldData.length)}
   `;
