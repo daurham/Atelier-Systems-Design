@@ -12,8 +12,10 @@ const pool = new Pool({
   connectionTimeoutMillis: 2000,
 });
 
-const reviews = function (query, data, endpoint, callback) {
-  pool.query(query, callback);
+const reviews = function (query, data, callback) {
+  // console.log('data',data);
+  if (data) pool.query(query, [data], callback);
+  if (!data) pool.query(query, callback);
 };
 const meta = function (data, endpoint, callback) {
   pool.query(query, [data], callback);
@@ -27,5 +29,8 @@ const helpful = function (data, endpoint, callback) {
 const report = function (data, endpoint, callback) {
   pool.query(query, [data], callback);
 };
+const getPhotos = function (query, id, callback) {
+  pool.query(query, [id], callback);
+};
 
-module.exports = { reviews, meta, post, helpful, report };
+module.exports = { reviews, meta, post, helpful, report, getPhotos };

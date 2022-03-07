@@ -1,5 +1,14 @@
 
   {
+    "Date": "Mon-Mar-07-2022-11:28:41",
+      "Execution Time: Network Request": 35.62,
+      "Execution Time: Query": 0.048,
+      "Net.Req. Method": "GET",
+      "Enpoint": "/reviews/",
+      "Query": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      
+  }
+  
     "Date": "Mon-Mar-07-2022-11:20:27",
       "Execution Time: Network Request": 37.89,
       "Execution Time: Query": 0.099,
@@ -2347,6 +2356,7 @@
 
 
 
+  
   
   
   

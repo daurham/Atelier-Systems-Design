@@ -5,10 +5,10 @@ const response = require('./response');
 
 
 const reviews = function (req, res, endpoint, time, test) {
-  let data = {};
+  let data = req.query.product_id;
   let query = setQuery.reviews(req, res, endpoint, time, test);
 
-  model.reviews(query, data, endpoint, (err, result) => {
+  model.reviews(query, data, (err, result) => {
     response.get(req, res, err, result);
     if (time) {
       recordTime.reviews(req, res, endpoint, time, result, query);
@@ -63,5 +63,7 @@ const report = function (req, res, endpoint, time) {
     }
   });
 };
+
+
 
 module.exports = { reviews, meta, post, helpful, report };
