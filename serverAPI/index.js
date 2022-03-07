@@ -1,16 +1,15 @@
 const express = require('express');
 const path = require('path');
 const controller = require('./controller/index.js');
-// const recordTime = require('../speed_test.js');
 const { JSDOM } = require("jsdom");
 const { window } = new JSDOM();
 const app = express();
-const PORT = 3000 || porcess.env.PORT;
+const PORT = porcess.env.PORT || 3000;
 const directory = 'client/dist';
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
-
+// Endpoints
 const reviews = '/reviews/'; // query: page, count, sort, product_id
 const meta = '/reviews/meta'; // param: product_id
 const post = '/reviews'; // body: product_id, rating, summary, body, recommend, name, email, photos, characteristics

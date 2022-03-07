@@ -1,7 +1,6 @@
 const controller = require('../controller/index.js');
-
-const supertest = require('supertest');
 const index = require('../index.js');
+const supertest = require('supertest');
 const app = index.app;
 const request = supertest(app);
 

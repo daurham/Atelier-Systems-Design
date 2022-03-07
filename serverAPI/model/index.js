@@ -16,19 +16,15 @@ const reviews = function (query, data, endpoint, callback) {
   pool.query(query, callback);
 };
 const meta = function (data, endpoint, callback) {
-  let query;
   pool.query(query, [data], callback);
 };
 const post = function (data, endpoint, callback) {
-  let query;
   pool.query(query, [data], callback);
 };
 const helpful = function (data, endpoint, callback) {
-  let query;
   pool.query(query, [data], callback);
 };
 const report = function (data, endpoint, callback) {
-  let query;
   pool.query(query, [data], callback);
 };
 
