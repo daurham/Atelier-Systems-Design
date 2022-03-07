@@ -1,71 +1,45 @@
-// const controller = require('./controller/index.js');
 const express = require('express');
 const path = require('path');
-const recordTime = require('../speed_test.js');
-const dbPassword = require('../config.js');
+const controller = require('./controller/index.js');
+// const recordTime = require('../speed_test.js');
+const { JSDOM } = require("jsdom");
+const { window } = new JSDOM();
 const app = express();
 const PORT = 3000 || porcess.env.PORT;
 const directory = 'client/dist';
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
-const { JSDOM } = require("jsdom");
-const { window } = new JSDOM();
-let start;
-let end;
 
-const { Pool } = require('pg')
-const pool = new Pool({
-  host: 'localhost',
-  user: 'daurham',
-  database: 'ratings_reviews',
-  port: 5432,
-  password: `${dbPassword}`,
-  max: 10,
-  idleTimeoutMillis: 30000,
-  connectionTimeoutMillis: 2000,
-});
+const reviews = '/reviews/'; // query: page, count, sort, product_id
+const meta = '/reviews/meta'; // param: product_id
+const post = '/reviews'; // body: product_id, rating, summary, body, recommend, name, email, photos, characteristics
+const helpful = '/reviews/:review_id/helpful'; // param: r_id
+const report = '/reviews/:review_id/report'; // param: r_id
 
-const model = (id, endpoint, callback) => {
-  let queryStr;
-  if (endpoint.indexOf('meta') > -1) {
-    queryStr = `explain (analyze, timing, format json) SELECT * FROM reviews WHERE id = $1 limit 3`;
-  } else {
-    queryStr = `
-    explain (analyze, timing, format json) SELECT * FROM reviews WHERE id = $1 limit 3`;
-  }
-  start = window.performance.now();
-    pool.query(queryStr, [id], (err, data) => {
-      callback(err, data, endpoint);
-    })
-};
+// Main Listeners:
+app.get(reviews, (req, res) => controller.reviews(req, res, reviews));
+app.get(meta, (req, res) => controller.meta(req, res, meta));
+app.post(post, (req, res) => controller.meta(req, res, post));
+app.put(helpful, (req, res) => controller.helpful(req, res, helpful));
+app.put(report, (req, res) => controller.report(req, res, report));
 
-const controller = (req, res, endpoint) => {
-  model(req.params.id || 3, endpoint, (err, result, endpoint) => {
-    if (err) {
-      console.log('Err:', err);
-      res.sendStatus(500);
-    } else {
-      end = window.performance.now();
-      recordTime(`
-      "Enpoint": "${endpoint}",
-      "ExecutionTime": "${end - start} ms"
-      `, result.rows);
-      res.status(200).send(result);
-    }
-  })
-};
+// Testing
+app.get(reviews + 'test', (req, res) => controller.reviews(req, res, null, null, true));
+app.get(meta + '/test', (req, res) => controller.meta(req, res, null, null, true));
+app.post(post + '/test', (req, res) => controller.post(req, res, null, null, true));
+app.put(helpful + '/test', (req, res) => controller.helpful(req, res, null, null, true));
+app.put(report + '/test', (req, res) => controller.report(req, res, null, null, true));
 
-// endpoints:
-const reviews = '/reviews/'
-const meta = '/reviews/meta'
-
-// Listeners:
-const getReviewsFn = app.get(reviews, (req, res) => {controller(req, res, reviews)});
-const getMetaFn = app.get(meta, (req, res) => {controller(req, res, meta)});
+// Timeing
+app.get(reviews + 'time', (req, res) => controller.reviews(req, res, reviews, window.performance.now()));
+app.get(meta + '/time', (req, res) => controller.meta(req, res, meta, widnow.performance.now()));
+app.post(post + '/time', (req, res) => controller.post(req, res, post, widnow.performance.now()));
+app.put(helpful + '/time', (req, res) => controller.helpful(req, res, helpful, widnow.performance.now()));
+app.put(report + '/time', (req, res) => controller.report(req, res, report, widnow.performance.now()));
 
 
 app.listen(PORT, () => console.log(`listening to port ${PORT}`));
 app.use(express.static(`${directory}`))
 
-// module.exports = getReviewsFn, getMetaFn;
+module.exports = { app };
