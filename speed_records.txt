@@ -1,5 +1,1470 @@
 
   {
+    "Date": "Sun-Mar-06-2022-20:21:51",
+      "Execution Time: Network Request": 38.75,
+      "Execution Time: Query": 0.067,
+      "Net.Req. Method": "GET",
+      "Enpoint": "/reviews/",
+      "Query": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      
+  }
+  
+    "Date": "Sun-Mar-06-2022-20:21:43",
+      "Execution Time: Network Request": 17.34,
+      "Execution Time: Query": 0.022,
+      "Net.Req. Method": "GET",
+      "Enpoint": "/reviews/",
+      "Query": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      
+  }
+  
+    "Date": "Sun-Mar-06-2022-20:21:10",
+      "Execution Time: Network Request": 31.79,
+      "Execution Time: Query": 0.118,
+      "Net.Req. Method": "GET",
+      "Enpoint": "/reviews/",
+      "Query": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      
+  }
+  
+    "Date": "Sun-Mar-06-2022-19:06:52",
+      "Execution Time: Network Request": 205.77,
+      "Execution Time: Query": 0.832,
+      "Net.Req. Method": "GET",
+      "Enpoint": "/reviews/",
+      "Query": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      
+  }
+  
+    "Date": "Sun-Mar-06-2022-18:11:01",
+      "Execution Time: Network Request": 31.2,
+      "Execution Time: Query": 0.04,
+      "Net.Req. Method": "GET",
+      "Enpoint": "/reviews/",
+      "QueryUsed": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      
+  }
+  
+    "Date": "Sun-Mar-06-2022-18:10:16",
+      "Execution Time: Network Request": "33.67 ms",
+      "Execution Time: Query": "0.038",
+      "Net.Req. Method": "GET",
+      "Enpoint": "/reviews/",
+      "QueryUsed": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      
+  }
+  
+    "Date": "Sun-Mar-06-2022-18:07:16",
+      "Execution Time: Network Request": "33.48 ms",
+      "Execution Time: Query": "0.039",
+      "Net.Req. Method": "GET",
+      "Enpoint": "/reviews/",
+      "QueryUsed": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      
+  }
+  
+    "Date": "Sun-Mar-06-2022-18:07:04",
+      "Execution Time: Network Request": "32.86 ms",
+      "Execution Time: Query": "0.069",
+      "Net.Req. Method": "GET",
+      "Enpoint": "/reviews/",
+      "QueryUsed": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      
+  }
+  
+    "Date": "Sun-Mar-06-2022-18:04:59",
+      "Execution Time: Network Request": "31.16 ms",
+      "Execution Time: Query": "0.04",
+      "Net.Req. Method": "GET",
+      "Enpoint": "/reviews/",
+      "QueryUsed": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.007,
+          "Actual Total Time": 0.007,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.3,
+        "Triggers": [],
+        "Execution Time": 0.04
+      },
+      {
+        "Execution Time: Network Request": "31.16 ms",
+        "Execution Time: Query": "0.04",
+        "Net.Req. Method": "GET",
+        "Enpoint": "/reviews/",
+        "QueryUsed": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-18:03:11",
+      "Execution Time: Network Request": "34.4 ms",
+      "Execution Time: Query": "0.056",
+      "Enpoint": "/reviews/",
+      "QueryUsed": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.01,
+          "Actual Total Time": 0.01,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.457,
+        "Triggers": [],
+        "Execution Time": 0.056
+      },
+      {
+        "Execution Time: Network Request": "34.4 ms",
+        "Execution Time: Query": "0.056",
+        "Enpoint": "/reviews/",
+        "QueryUsed": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-18:02:42",
+      "Execution Time: Network Request": "34.42 ms",
+      "Execution Time: Query": "0.039",
+      "Enpoint": "/reviews/",
+      "QueryUsed": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.008,
+          "Actual Total Time": 0.008,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.295,
+        "Triggers": [],
+        "Execution Time": 0.039
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:58:32",
+      "Execution Time: Network Request": "31.46 ms",
+      "Execution Time: Query": "0.038",
+      "Enpoint": "/reviews/",
+      "QueryUsed": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.007,
+          "Actual Total Time": 0.007,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.271,
+        "Triggers": [],
+        "Execution Time": 0.038
+      },
+      "\n      \"Execution Time: Network Request\": \"31.46 ms\",\n      \"Execution Time: Query\": \"0.038\",\n      \"Enpoint\": \"/reviews/\",\n      \"QueryUsed\": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]\n      "
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:56:21",
+      "Execution Time: Network Request": "39.04 ms",
+      "Execution Time: Query": "0.088",
+      "Enpoint": "/reviews/",
+      "QueryUsed": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.014,
+          "Actual Total Time": 0.015,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.383,
+        "Triggers": [],
+        "Execution Time": 0.088
+      },
+      "\n      \"Execution Time: Network Request\": \"39.04 ms\",\n      \"Execution Time: Query\": \"0.088\",\n      \"Enpoint\": \"/reviews/\",\n      \"QueryUsed\": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]\n      "
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:56:10",
+      "Execution Time: Network Request": "31.02 ms",
+      "Execution Time: Query": "0.039",
+      "Enpoint": "/reviews/",
+      "QueryUsed": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.008,
+          "Actual Total Time": 0.008,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.299,
+        "Triggers": [],
+        "Execution Time": 0.039
+      },
+      "\n      \"Execution Time: Network Request\": \"31.02 ms\",\n      \"Execution Time: Query\": \"0.039\",\n      \"Enpoint\": \"/reviews/\",\n      \"QueryUsed\": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]\n      "
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:55:03",
+      "Execution Time: Network Request": "31.75 ms",
+      "Execution Time: Query": "0.042",
+      "Enpoint": "/reviews/",
+      "QueryUsed": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.007,
+          "Actual Total Time": 0.008,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.31,
+        "Triggers": [],
+        "Execution Time": 0.042
+      },
+      "\n      \"Execution Time: Network Request\": \"31.75 ms\",\n      \"Execution Time: Query\": \"0.042\",\n      \"Enpoint\": \"/reviews/\",\n      \"QueryUsed\": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]\n      "
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:54:47",
+      "Execution Time: Network Request": "43.04 ms",
+      "Execution Time: Query": "0.06",
+      "Enpoint": "/reviews/",
+      "QueryUsed": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.011,
+          "Actual Total Time": 0.012,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.527,
+        "Triggers": [],
+        "Execution Time": 0.06
+      },
+      "\n      \"Execution Time: Network Request\": \"43.04 ms\",\n      \"Execution Time: Query\": \"0.06\",\n      \"Enpoint\": \"/reviews/\",\n      \"QueryUsed\": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]\n      "
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:49:51",
+      "Execution Time - Network Request": "31.65 ms",
+      "Execution Time - Query": "0.038",
+      "Enpoint": "/reviews/",
+      "QueryUsed": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.007,
+          "Actual Total Time": 0.008,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.28,
+        "Triggers": [],
+        "Execution Time": 0.038
+      },
+      "\"\\n      \\\"Execution Time - Network Request\\\": \\\"31.65 ms\\\",\\n      \\\"Execution Time - Query\\\": \\\"0.038\\\",\\n      \\\"Enpoint\\\": \\\"/reviews/\\\",\\n      \\\"QueryUsed\\\": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]\\n      \""
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:48:55",
+      "Execution Time - Network Request": "37.54 ms",
+      "Execution Time - Query": "0.065",
+      "Enpoint": "/reviews/",
+      "QueryUsed": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.011,
+          "Actual Total Time": 0.012,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.492,
+        "Triggers": [],
+        "Execution Time": 0.065
+      },
+      "\n      \"Execution Time - Network Request\": \"37.54 ms\",\n      \"Execution Time - Query\": \"0.065\",\n      \"Enpoint\": \"/reviews/\",\n      \"QueryUsed\": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]\n      "
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:46:03",
+      "Execution Time - Network Request": "31.46 ms",
+      "Execution Time - Query": "0.041",
+      "Enpoint": "/reviews/",
+      "QueryUsed": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.007,
+          "Actual Total Time": 0.008,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.305,
+        "Triggers": [],
+        "Execution Time": 0.041
+      },
+      {
+        "QUERY USED": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:45:53",
+      "Execution Time - Network Request": "31.09 ms",
+      "Execution Time - Query": "undefined",
+      "Enpoint": "/reviews/",
+      "QueryUsed": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.009,
+          "Actual Total Time": 0.01,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.348,
+        "Triggers": [],
+        "Execution Time": 0.061
+      },
+      {
+        "QUERY USED": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:45:29",
+      "Execution Time - Network Request": "33.29 ms",
+      "Execution Time - Query": "undefined",
+      "Enpoint": "/reviews/",
+      "QueryUsed": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.008,
+          "Actual Total Time": 0.009,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.339,
+        "Triggers": [],
+        "Execution Time": 0.043
+      },
+      {
+        "QUERY USED": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:45:08",
+      "Execution Time - Network Request": "44.04 ms",
+      "Execution Time - Query": "undefined",
+      "Enpoint": "/reviews/",
+      "QueryUsed": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.014,
+          "Actual Total Time": 0.014,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.583,
+        "Triggers": [],
+        "Execution Time": 0.069
+      },
+      {
+        "QUERY USED": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:43:40",
+      "Execution Time - Network Request": "35.09 ms",
+      "Execution Time - Query": "undefined",
+      "Enpoint": "/reviews/",
+      "QueryUsed": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.006,
+          "Actual Total Time": 0.007,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.316,
+        "Triggers": [],
+        "Execution Time": 0.039
+      },
+      {
+        "QUERY USED": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:43:32",
+      "Execution Time - Network Request": "31.6 ms",
+      "Execution Time - Query": "undefined",
+      "Enpoint": "/reviews/",
+      "QueryUsed": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.007,
+          "Actual Total Time": 0.008,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.301,
+        "Triggers": [],
+        "Execution Time": 0.042
+      },
+      {
+        "QUERY USED": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:43:03",
+      "Execution Time - Network Request": "34.84 ms",
+      "Execution Time - Query": "undefined",
+      "Enpoint": "/reviews/",
+      "QueryUsed": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.006,
+          "Actual Total Time": 0.007,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.277,
+        "Triggers": [],
+        "Execution Time": 0.037
+      },
+      {
+        "QUERY USED": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:42:06",
+      "Execution Time - Network Request": "31.46 ms",
+      "Execution Time - Query": "undefined",
+      "Enpoint": "/reviews/",
+      "QueryUsed": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.008,
+          "Actual Total Time": 0.008,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.285,
+        "Triggers": [],
+        "Execution Time": 0.042
+      },
+      {
+        "QUERY USED": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:41:39",
+      "Execution Time - Network Request": "31.72 ms",
+      "Execution Time - Query": "undefined",
+      "Enpoint": "/reviews/",
+      "QueryUsed": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.007,
+          "Actual Total Time": 0.008,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.318,
+        "Triggers": [],
+        "Execution Time": 0.043
+      },
+      {
+        "QUERY USED": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:40:23",
+      "Enpoint": "/reviews/",
+      "Network Request Execution Time": "36.63 ms",
+      "Query Execution Time": "undefined"
+      "QueryUsed": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.009,
+          "Actual Total Time": 0.01,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.346,
+        "Triggers": [],
+        "Execution Time": 0.047
+      },
+      {
+        "QUERY USED": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:40:02",
+      "Enpoint": "/reviews/",
+      "Network Request Execution Time": "NaN ms",
+      "Query Execution Time": "undefined"
+      "QueryUsed": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.007,
+          "Actual Total Time": 0.008,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.286,
+        "Triggers": [],
+        "Execution Time": 0.039
+      },
+      {
+        "QUERY USED": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:38:23",
+      "Enpoint": "/reviews/",
+      "Network Request Execution Time": "NaN ms",
+      "Query Execution Time": "undefined"
+      "QueryUsed": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.007,
+          "Actual Total Time": 0.008,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.31,
+        "Triggers": [],
+        "Execution Time": 0.04
+      },
+      {
+        "QUERY USED": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:33:15",
+      "Enpoint": "/reviews/",
+      "Network Request Execution Time": "NaN ms",
+      "Query Execution Time": "undefined"
+      "QueryUsed": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.007,
+          "Actual Total Time": 0.008,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.275,
+        "Triggers": [],
+        "Execution Time": 0.038
+      },
+      {
+        "QUERY USED": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:31:14",
+      "Enpoint": "/reviews/",
+      "Network Request Execution Time": "NaN ms",
+      "QueryUsed": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.007,
+          "Actual Total Time": 0.008,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.309,
+        "Triggers": [],
+        "Execution Time": 0.041
+      },
+      {
+        "QUERY USED": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:30:49",
+      "Enpoint": "/reviews/",
+      "Network Request Execution Time": "NaN ms",
+      "QueryUsed": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.007,
+          "Actual Total Time": 0.008,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.294,
+        "Triggers": [],
+        "Execution Time": 0.04
+      },
+      {
+        "QUERY USED": "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:23:06",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "NaN ms",
+      "Query-Used": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.007,
+          "Actual Total Time": 0.007,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.323,
+        "Triggers": [],
+        "Execution Time": 0.041
+      },
+      {
+        "Query-Used": [
+          "explain (analyze, timing, format json) SELECT * FROM reviews where id = 5"
+        ]
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:19:03",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "NaN ms",
+      "Query-Used": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.016,
+          "Actual Total Time": 0.017,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.626,
+        "Triggers": [],
+        "Execution Time": 0.074
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:17:19",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "NaN ms",
+      "Query-Used": [explain (analyze, timing, format json) SELECT * FROM reviews where id = 5]
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.007,
+          "Actual Total Time": 0.007,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.286,
+        "Triggers": [],
+        "Execution Time": 0.038
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:16:49",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "NaN ms",
+      "Query-Used": explain (analyze, timing, format json) SELECT * FROM reviews where id = 5
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.007,
+          "Actual Total Time": 0.007,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.275,
+        "Triggers": [],
+        "Execution Time": 0.038
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:16:14",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "NaN ms",
+      "Query-Used": explain (analyze, timing, format json) SELECT * FROM reviews where id = 5
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.006,
+          "Actual Total Time": 0.007,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.275,
+        "Triggers": [],
+        "Execution Time": 0.038
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:16:08",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "NaN ms",
+      "Query-Used": explain (analyze, timing, format json) SELECT * FROM reviews where id = 5
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.008,
+          "Actual Total Time": 0.009,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.313,
+        "Triggers": [],
+        "Execution Time": 0.063
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:15:49",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "NaN ms",
+      "Query-Used": explain (analyze, timing, format json) SELECT * FROM reviews where id = 5
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.009,
+          "Actual Total Time": 0.01,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.543,
+        "Triggers": [],
+        "Execution Time": 0.054
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:07:34",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "NaN ms"
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Seq Scan",
+          "Parallel Aware": false,
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0,
+          "Total Cost": 30917.02,
+          "Plan Rows": 577102,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.353,
+          "Actual Total Time": 2339.242,
+          "Actual Rows": 577102,
+          "Actual Loops": 1
+        },
+        "Planning Time": 0.411,
+        "Triggers": [],
+        "Execution Time": 2360.472
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:05:36",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "NaN ms"
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.007,
+          "Actual Total Time": 0.008,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.28,
+        "Triggers": [],
+        "Execution Time": 0.034
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:04:26",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "NaN ms"
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Index Scan",
+          "Parallel Aware": false,
+          "Scan Direction": "Forward",
+          "Index Name": "reviews_pkey",
+          "Relation Name": "reviews",
+          "Alias": "reviews",
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.008,
+          "Actual Total Time": 0.008,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Index Cond": "(id = 5)",
+          "Rows Removed by Index Recheck": 0
+        },
+        "Planning Time": 0.404,
+        "Triggers": [],
+        "Execution Time": 0.043
+      }
+    ]
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:04:11",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "NaN ms"
+      ,[
+  {
+    "QUERY PLAN": "Index Scan using reviews_pkey on reviews  (cost=0.42..8.44 rows=1 width=315)"
+  },
+  {
+    "QUERY PLAN": "  Index Cond: (id = 5)"
+  }
+]
+  }
+  
+    "Date": "Sun-Mar-06-2022-17:03:13",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "NaN ms"
+      ,[
+  {
+    "QUERY PLAN": "Index Scan using reviews_pkey on reviews  (cost=0.42..8.44 rows=1 width=315) (actual time=0.012..0.013 rows=1 loops=1)"
+  },
+  {
+    "QUERY PLAN": "  Index Cond: (id = 5)"
+  },
+  {
+    "QUERY PLAN": "Planning Time: 0.501 ms"
+  },
+  {
+    "QUERY PLAN": "Execution Time: 0.059 ms"
+  }
+]
+  }
+  
+    "Date": "Sat-Mar-05-2022-14:42:05",
+      "Enpoint": "/reviews/",
+      "ExecutionTime": "33.08598100004019 ms"
+      ,[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Limit",
+          "Parallel Aware": false,
+          "Startup Cost": 0.42,
+          "Total Cost": 8.44,
+          "Plan Rows": 1,
+          "Plan Width": 315,
+          "Actual Startup Time": 0.039,
+          "Actual Total Time": 0.04,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Plans": [
+            {
+              "Node Type": "Index Scan",
+              "Parent Relationship": "Outer",
+              "Parallel Aware": false,
+              "Scan Direction": "Forward",
+              "Index Name": "reviews_pkey",
+              "Relation Name": "reviews",
+              "Alias": "reviews",
+              "Startup Cost": 0.42,
+              "Total Cost": 8.44,
+              "Plan Rows": 1,
+              "Plan Width": 315,
+              "Actual Startup Time": 0.037,
+              "Actual Total Time": 0.037,
+              "Actual Rows": 1,
+              "Actual Loops": 1,
+              "Index Cond": "(id = 3)",
+              "Rows Removed by Index Recheck": 0
+            }
+          ]
+        },
+        "Planning Time": 0.59,
+        "Triggers": [],
+        "Execution Time": 0.094
+      }
+    ]
+  }
+]
+  }
+  
     "Date": "Sat-Mar-05-2022-14:13:35",
       "Enpoint": "/reviews/",
       "ExecutionTime": "12.19780499999979 ms"
@@ -873,6 +2338,52 @@
 
 
 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
