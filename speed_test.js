@@ -1,9 +1,9 @@
 const fs = require('fs');
 const file = 'speed_records.txt';
 const JSONfile = 'speed_records.json';
-// const run = require('./serverAPI/index.js');
 
-// Speed tesing function
+  // Speed tesing functions:
+// Read the data
 function readData(cb) {
   fs.readFile(file, (err, txtFileData) => {
     if (err) {
@@ -20,6 +20,7 @@ function readData(cb) {
   });
 };
 
+// Logs the data
 const logData = (oldData, oldJSONdata, newData, newPsqlRecords) => {
   let d = (new Date().toString().slice(0, -34)).replace(/\s/g, '-');
   oldData = oldData.toString();
@@ -59,7 +60,6 @@ module.exports = runRecordKepper = (newRecords, newPsqlRecords) => {
     if (err) {
       console.log('[function] "readData" ERROR: ', err);
     } else {
-      // console.log(JSON.stringify(psqlRecords));
       logData(txtFileData, JSONFileData, newRecords, newPsqlRecords);
     }
   });

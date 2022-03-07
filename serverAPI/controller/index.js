@@ -11,7 +11,7 @@ const reviews = function (req, res, endpoint, time, test) {
   model.reviews(query, data, endpoint, (err, result) => {
     response.get(req, res, err, result);
     if (time) {
-      recordTime.reviews(req, res, endpoint, time, test);
+      recordTime.reviews(req, res, endpoint, time, result, query);
     }
   });
 };
@@ -23,7 +23,7 @@ const meta = function (req, res, endpoint, time) {
   model.meta(query, data, endpoint, (err, result) => {
     response.get(req, res, err, result);
     if (time) {
-      recordTime.meta(req, res, endpoint, time);
+      recordTime.meta(req, res, endpoint, time, result, query);
     }
   });
 };
@@ -35,7 +35,7 @@ const post = function (req, res, endpoint, time) {
   model.post(query, data, endpoint, (err, result) => {
     response.post(req, res, err, result)
     if (time) {
-      recordTime.post(req, res, endpoint, time);
+      recordTime.post(req, res, endpoint, time, result, query);
     }
   });
 };
@@ -47,7 +47,7 @@ const helpful = function (req, res, endpoint, time) {
   model.helpful(query, data, endpoint, (err, result) => {
     response.put(req, res, err, result)
     if (time) {
-      recordTime.helpful(req, res, endpoint, time);
+      recordTime.helpful(req, res, endpoint, time, result, query);
     }
   });
 };
@@ -59,7 +59,7 @@ const report = function (req, res, endpoint, time) {
   model.report(query, data, endpoint, (err, result) => {
     response.put(req, res, err, result)
     if (time) {
-      recordTime.report(req, res, endpoint, time);
+      recordTime.report(req, res, endpoint, time, result, query);
     }
   });
 };
