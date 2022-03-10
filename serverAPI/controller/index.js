@@ -3,7 +3,6 @@ const setQuery = require('./queries');
 const recordTime = require('./buildData');
 const response = require('./response');
 
-
 const reviews = function (req, res, endpoint, time, test) {
   let data = req.query.product_id;
   let query = setQuery.reviews(req, res, endpoint, time, test);
@@ -29,7 +28,7 @@ const meta = function (req, res, endpoint, time) {
 };
 
 const post = function (req, res, endpoint, time) {
-  let data = {};
+  let data = { 'product_id': req.body.product_id, 'rating': req.body.rating, 'summary': req.body.summary, 'body': req.body.body, 'recommend': req.body.recommend, 'name': req.body.name, 'email': req.body.email};
   let query = setQuery.post(req, res, endpoint, time, test);
 
   model.post(query, data, endpoint, (err, result) => {
@@ -41,7 +40,7 @@ const post = function (req, res, endpoint, time) {
 };
 
 const helpful = function (req, res, endpoint, time) {
-  let data = {};
+  let data = req.params.review_id;
   let query = setQuery.helpful(req, res, endpoint, time, test);
 
   model.helpful(query, data, endpoint, (err, result) => {
@@ -53,7 +52,7 @@ const helpful = function (req, res, endpoint, time) {
 };
 
 const report = function (req, res, endpoint, time) {
-  let data = {};
+  let data = req.params.review_id;
   let query = setQuery.report(req, res, endpoint, time, test);
 
   model.report(query, data, endpoint, (err, result) => {
@@ -63,7 +62,5 @@ const report = function (req, res, endpoint, time) {
     }
   });
 };
-
-
 
 module.exports = { reviews, meta, post, helpful, report };

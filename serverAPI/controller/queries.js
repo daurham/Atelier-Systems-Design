@@ -3,60 +3,106 @@ const model = require('../model/index.js');
 const reviews = (req, res, endpoint, time, test) => {
   let query;
   if (time) {
-    query = 'explain (analyze, timing, format json) SELECT * FROM reviews where id = 5';
+    query = `explain (analyze, timing, format json) SELECT reviews.*, json_agg(
+      json_build_object(
+        'id', reviews_photos.id,
+        'url', reviews_photos.url
+      )
+    ) AS photos FROM reviews JOIN reviews_photos
+    ON reviews.id=reviews_photos.review_id WHERE reviews.product_id=$1 GROUP BY reviews.id`;
   } else if (test) {
-    query = 'select * from reviews where id = 5'
+    query = `SELECT reviews.*, json_agg(
+      json_build_object(
+        'id', reviews_photos.id,
+        'url', reviews_photos.url
+      )
+    ) AS photos FROM reviews JOIN reviews_photos
+    ON reviews.id=reviews_photos.review_id WHERE reviews.product_id=$1 GROUP BY reviews.id`;
   } else {
-    query = 'select * from reviews where product_id = $1'
+    // query = `SELECT json_agg(json_build_object('review_id',reviews.id,'rating', reviews.rating,'summary', reviews.summary,'recommend', reviews.recommend,'response', reviews.response,'body', reviews.body,'date', reviews.date,'reviewer_name', reviews.reviewer_name,'helpfulness', reviews.helpfulness,'photos', (SELECT coalesce(photos, '[]'::json) FROM (SELECT json_agg(json_build_object( 'id', reviews_photos.id,'url', reviews_photos.url) ) AS photos from reviews_photos WHERE reviews_photos.review_id = reviews.id) AS photos))) AS results FROM reviews WHERE product_id = $1`;
+
+        query = `SELECT reviews.*, json_agg(
+      json_build_object(
+        'id', reviews_photos.id,
+        'url', reviews_photos.url
+      )
+    ) AS photos FROM reviews JOIN reviews_photos
+    ON reviews.id=reviews_photos.review_id WHERE reviews.product_id=$1 GROUP BY reviews.id`;
   }
   return query;
 };
 const meta = (req, res, endpoint, time, test) => {
+  // DOES NOT WORK
   let query;
   if (time) {
-    query = 'explain (analyze, timing, format json) SELECT * FROM reviews where id = 5';
+    query = 'explain (analyze, timing, format json) ';
   } else if (test) {
-    query = 'select * from reviews where id = 5'
+    query = ''
   } else {
-    query = 'select * from reviews where id = 5'
+    query = ''
   }
   return query;
 };
 const post = (req, res, endpoint, time, test) => {
+  // DOES NOT WORK
   let query;
   if (time) {
-    query = 'explain (analyze, timing, format json) SELECT * FROM reviews where id = 5';
+    query = 'explain (analyze, timing, format json) ';
   } else if (test) {
-    query = 'select * from reviews where id = 5'
+    query = ''
   } else {
-    query = 'select * from reviews where id = 5'
+    query = `
+    insert into reviews (product_id, rating, summary, body, recommend, name, email)
+      values ($1, $2, $3, $4, $5, $6, $7);
+
+    insert into reviews_photos (url, review_id)
+      values ();
+
+    insert into characteristic_reviews (characteristic_id, value, review_id)
+      values (req.body.characteristics.characteristic_id, req.body.characteristics.value);
+
+    insert into characteristics (product_id, name, characteristic_id)
+      values ($1, );`;
   }
   return query;
 };
 const helpful = (req, res, endpoint, time, test) => {
+  // DOES NOT WORK
+  // create a new table name meta with helpfulness col and add up all the helpfulness ratings per thing.
   let query;
   if (time) {
-    query = 'explain (analyze, timing, format json) SELECT * FROM reviews where id = 5';
+    query = `explain (analyze, timing, format json)
+    update meta
+      set helpfulness = helpfulness + 1
+    where review_id = $1`;
   } else if (test) {
-    query = 'select * from reviews where id = 5'
+    query = `
+    update meta
+      set helpfulness = helpfulness + 1
+    where review_id = $1`;
   } else {
-    query = 'select * from reviews where id = 5'
+    query = `
+    update meta
+      set helpfulness = helpfulness + 1
+    where review_id = $1`;
   }
   return query;
 };
 const report = (req, res, endpoint, time, test) => {
   let query;
   if (time) {
-    query = 'explain (analyze, timing, format json) SELECT * FROM reviews where id = 5';
+    query = `explain (analyze, timing, format json)
+             UPDATE reviews SET reported = NOT reported WHERE review_id = $1`;
   } else if (test) {
-    query = 'select * from reviews where id = 5'
+    query = `UPDATE reviews SET reported = NOT reported WHERE review_id = $1`;
   } else {
-    query = 'select * from reviews where id = 5'
+    query = `UPDATE reviews SET reported = NOT reported WHERE review_id = $1`;
   }
   return query;
 };
 
 const getPhotos = (id, callback) => {
+  // DOES NOT WORK
   let query = 'select * from reviews_photos where review_id = $1'
   model.getPhotos(query, id, (err, result) => {
     if (err) {

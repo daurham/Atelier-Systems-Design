@@ -13,7 +13,7 @@ describe('Reviews', () => {
 
   // Reviews
   it('should get data from database', async done => {
-    const response = await request.get('/reviews/test')
+    const response = await request.get('/reviews/test?product_id=2')
     expect(response.status).toBe(200)
     // cosnole.log()
     // it('should retrieve the review table data', () => {

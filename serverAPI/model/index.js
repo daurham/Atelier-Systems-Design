@@ -1,8 +1,21 @@
 const { Pool } = require('pg')
 const dbPassword = require('../../config.js');
 
+// local:
+// const pool = new Pool({
+//   host: 'localhost',
+//   user: 'daurham',
+//   database: 'ratings_reviews',
+//   port: 5432,
+//   password: `${dbPassword}`,
+//   max: 10,
+//   idleTimeoutMillis: 30000,
+//   connectionTimeoutMillis: 2000,
+// });
+
+// remote
 const pool = new Pool({
-  host: 'localhost',
+  host: '3.95.11.89',
   user: 'daurham',
   database: 'ratings_reviews',
   port: 5432,
@@ -13,20 +26,18 @@ const pool = new Pool({
 });
 
 const reviews = function (query, data, callback) {
-  // console.log('data',data);
-  if (data) pool.query(query, [data], callback);
-  if (!data) pool.query(query, callback);
-};
-const meta = function (data, endpoint, callback) {
   pool.query(query, [data], callback);
 };
-const post = function (data, endpoint, callback) {
+const meta = function (query, data, callback) {
   pool.query(query, [data], callback);
 };
-const helpful = function (data, endpoint, callback) {
+const post = function (query, data, callback) {
   pool.query(query, [data], callback);
 };
-const report = function (data, endpoint, callback) {
+const helpful = function (query, data, callback) {
+  pool.query(query, [data], callback);
+};
+const report = function (query, data, callback) {
   pool.query(query, [data], callback);
 };
 const getPhotos = function (query, id, callback) {
