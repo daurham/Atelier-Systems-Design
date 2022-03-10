@@ -1,9 +1,15 @@
+const restructureData = require('./restructureData.js');
+
 const get = (req, res, err, result) => {
-  if (err) {
-    res.status(500).send(err);
-  } else {
-    res.status(200).send(result);
-  }
+  // console.log(err, result);
+  // restructureData.getReviews(result, req, (err, result) => {
+    if (err) {
+      console.log('[restructureData] Err: ', err);
+      res.status(500).send(err);
+    } else {
+      res.status(200).send(result.rows);
+    }
+  // })
 };
 
 const post = (req, res, err, result) => {
