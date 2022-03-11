@@ -20,3 +20,4 @@ export default function () {
   sleep(1);
 }
 // docs: https://k6.io/blog/how-to-generate-a-constant-request-rate-with-the-new-scenarios-api/
+// k6 run k6script.js

@@ -1,6 +1,8 @@
 
 const getPhotos = require('./queries').getPhotos;
 
+// DOES NOT WORK
+
 const getReviews = (result, req, responseCallback) => {
   let error;
   let base = {};

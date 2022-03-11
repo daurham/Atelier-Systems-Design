@@ -7,3 +7,5 @@ Replace the previously provided, underperforming API used for the FEC Project.  
 Assuming you've downloaded and set up Postgresql, set up a database the can work with the queries defined and are aiming to run requests.
 run "npm install" to get the node modules.
 Testing with your own local database,
+
+## CTRL + SHFT + F, Type FILL_ME_IN to Fill in Reqs

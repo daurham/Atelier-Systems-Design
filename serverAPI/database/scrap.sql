@@ -54,7 +54,7 @@ Test 1  results:
 
 
 psql \
-   host=ip-172-31-30-235 \
+   host=ip-34.201.135.132 \
    port=5432 \
    username=daurham \
    password \
