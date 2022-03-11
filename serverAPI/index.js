@@ -24,6 +24,7 @@ app.put(helpful, (req, res) => controller.helpful(req, res, helpful));
 app.put(report, (req, res) => controller.report(req, res, report));
 
 // Testing
+app.get('/ping', (req, res) => res.send(`Pong`));
 app.get(reviews + 'test', (req, res) => controller.reviews(req, res, null, null, true));
 app.get(meta + '/test', (req, res) => controller.meta(req, res, null, null, true));
 app.post(post + '/test', (req, res) => controller.post(req, res, null, null, true));

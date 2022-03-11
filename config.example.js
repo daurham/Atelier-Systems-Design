@@ -1,4 +1,5 @@
-const dbKey = 'FILL_ME_IN';
+const dbPassword = 'Fill_ME_IN';
+const dbIP = 'FILL_ME_IN';
 
-module.exports = dbKey;
+module.exports = { dbPassword, dbIP };
 // After filled in, remove ".example" from this file name.

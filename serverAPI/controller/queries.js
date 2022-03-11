@@ -19,15 +19,14 @@ const reviews = (req, res, endpoint, time, test) => {
     ) AS photos FROM reviews JOIN reviews_photos
     ON reviews.id=reviews_photos.review_id WHERE reviews.product_id=$1 GROUP BY reviews.id`;
   } else {
-    // query = `SELECT json_agg(json_build_object('review_id',reviews.id,'rating', reviews.rating,'summary', reviews.summary,'recommend', reviews.recommend,'response', reviews.response,'body', reviews.body,'date', reviews.date,'reviewer_name', reviews.reviewer_name,'helpfulness', reviews.helpfulness,'photos', (SELECT coalesce(photos, '[]'::json) FROM (SELECT json_agg(json_build_object( 'id', reviews_photos.id,'url', reviews_photos.url) ) AS photos from reviews_photos WHERE reviews_photos.review_id = reviews.id) AS photos))) AS results FROM reviews WHERE product_id = $1`;
-
-        query = `SELECT reviews.*, json_agg(
+    query = `SELECT reviews.*, json_agg(
       json_build_object(
         'id', reviews_photos.id,
         'url', reviews_photos.url
-      )
-    ) AS photos FROM reviews JOIN reviews_photos
-    ON reviews.id=reviews_photos.review_id WHERE reviews.product_id=$1 GROUP BY reviews.id`;
+        )
+        ) AS photos FROM reviews JOIN reviews_photos
+        ON reviews.id=reviews_photos.review_id WHERE reviews.product_id=$1 GROUP BY reviews.id`;
+    // query = `SELECT json_agg(json_build_object('review_id',reviews.id,'rating', reviews.rating,'summary', reviews.summary,'recommend', reviews.recommend,'response', reviews.response,'body', reviews.body,'date', reviews.date,'reviewer_name', reviews.reviewer_name,'helpfulness', reviews.helpfulness,'photos', (SELECT coalesce(photos, '[]'::json) FROM (SELECT json_agg(json_build_object( 'id', reviews_photos.id,'url', reviews_photos.url) ) AS photos from reviews_photos WHERE reviews_photos.review_id = reviews.id) AS photos))) AS results FROM reviews WHERE product_id = $1`;
   }
   return query;
 };

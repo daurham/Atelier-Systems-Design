@@ -36,3 +36,6 @@ csvFiles
 node_modules
 # Files
 config.js
+scp.sh
+
+Dockerfile

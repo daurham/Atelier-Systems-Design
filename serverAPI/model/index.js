@@ -1,5 +1,6 @@
 const { Pool } = require('pg')
-const dbPassword = require('../../config.js');
+const dbPassword = require('../../config.js').dbPassword;
+const dbIP = require('../../config.js').dbIP;
 
 // local:
 // const pool = new Pool({
@@ -15,7 +16,7 @@ const dbPassword = require('../../config.js');
 
 // remote
 const pool = new Pool({
-  host: '3.95.11.89',
+  host: `${dbIP}`,
   user: 'daurham',
   database: 'ratings_reviews',
   port: 5432,
