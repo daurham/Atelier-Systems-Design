@@ -13,7 +13,6 @@ const getReviews = (result, req, responseCallback) => {
   console.log('Restructuring data: ', result);
   base.results = []
   result.forEach((result) => {
-    // return new Promise((resolve, reject) => {
       let review = {
         "review_id": result.id,
         "rating": result.rating,
@@ -29,29 +28,15 @@ const getReviews = (result, req, responseCallback) => {
       getPhotos(review.review_id, (err, photoData) => {
         if (err) {
           console.log('[getPhoto] Err: ', err);
-          // responseCallback(err);
           error = err;
-          // reject(err);
         } else {
           console.log('pic: ', photoData)
           review.photos.push(...photoData);
           base.results.push(review);
-          // resolve(base);
-          // responseCallback(null, base);
         }
       })
 
     })
-  // })
-  // console.log('Final Base: ', base);
-  // if (error) {
-  //   //   console.log('[getPhoto] Err: ', err);
-  //   responseCallback(error);
-  // } else {
-  //   //   review.photos.push(...photoData);
-  //   //   base.results.push(review);
-  //   responseCallback(null, base);
-  // }
 };
 
 const getMeta = (result) => {

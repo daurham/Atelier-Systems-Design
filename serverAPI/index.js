@@ -10,11 +10,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
 // Endpoints
-const reviews = '/reviews/'; // query: page, count, sort, product_id
-const meta = '/reviews/meta'; // param: product_id
-const post = '/reviews'; // body: product_id, rating, summary, body, recommend, name, email, photos, characteristics
-const helpful = '/reviews/:review_id/helpful'; // param: r_id
-const report = '/reviews/:review_id/report'; // param: r_id
+const reviews = '/reviews/';
+const meta = '/reviews/meta';
+const post = '/reviews';
+const helpful = '/reviews/:review_id/helpful';
+const report = '/reviews/:review_id/report';
 
 // Main Listeners:
 app.get(reviews, (req, res) => controller.reviews(req, res, reviews));
