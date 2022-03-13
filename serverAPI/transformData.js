@@ -1,7 +1,6 @@
 const fs = require('fs');
 const csv = require('csv');
 
-// traverse the CSV file and transform the date into a PSQL readible/FEC expected date.
 fs.createReadStream('../csvFiles/reviews.csv')
   .pipe(csv.parse({columns: true}))
   .pipe(csv.transform((input) => {

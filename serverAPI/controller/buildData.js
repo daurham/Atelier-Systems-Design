@@ -1,5 +1,3 @@
-/* This file is strictly for processing a data structre for my timed testing endpoint. To test, add "/time" at the end of the endpoint and the speed will be logged at the top of  speed_records.txt file and the bottom of speed_records.json. */
-
 const recordTime = require('../test/Speed Logs/speed_test.js');
 const { JSDOM } = require("jsdom");
 const { window } = new JSDOM();

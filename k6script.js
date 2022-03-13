@@ -4,10 +4,10 @@ export const options = {
   scenarios: {
     constant_request_rate: {
       executor: 'constant-arrival-rate',
-      rate: 1500, // "try to start 1500 reqs every [timeUnitVal] aka (1s)"
+      rate: 1500,
       timeUnit: '1s',
       duration: '15s',
-      preAllocatedVUs: 100, // The number of VUs to pre-allocate before the test starts.
+      preAllocatedVUs: 100,
       maxVUs: 1000
     }
   }
@@ -19,5 +19,5 @@ export default function () {
   http.get(urlProduct);
   sleep(1);
 }
+// Test: k6 run k6script.js
 // docs: https://k6.io/blog/how-to-generate-a-constant-request-rate-with-the-new-scenarios-api/
-// k6 run k6script.js

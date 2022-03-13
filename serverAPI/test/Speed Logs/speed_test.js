@@ -2,8 +2,6 @@ const fs = require('fs');
 const file = 'speed_records.txt';
 const JSONfile = 'speed_records.json';
 
-  // Speed tesing functions:
-// Read the data
 function readData(cb) {
   fs.readFile(file, (err, txtFileData) => {
     if (err) {
@@ -20,7 +18,6 @@ function readData(cb) {
   });
 };
 
-// Logs the data
 const logData = (oldData, oldJSONdata, newData, newPsqlRecords) => {
   let d = (new Date().toString().slice(0, -34)).replace(/\s/g, '-');
   oldData = oldData.toString();
