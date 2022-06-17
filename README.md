@@ -1,285 +1,194 @@
-# SDC-Jake
-
-## Objective:
-Replace the previously provided, underperforming API used for the FEC Project.  Rebuild a service within the API from scratch, focusing on optimizing performance and accommodating web traffic.
-
-## How to set up with your own Database:
-Assuming you've downloaded and set up Postgresql, set up a database the can work with the queries defined and are aiming to run requests.
-- Run "npm install" to get the node modules.
-- CTRL + SHFT + F, Type FILL_ME_IN to Fill in Reqs
-- CD to the serverAPI directory, and run "bash init.sh"
-- You should be able to connect to the url without including :3000, be it localhost or IP.
-
-### K6 Testing:
-Test: k6 run k6script.js
-Docs: https://k6.io/blog/how-to-generate-a-constant-request-rate-with-the-new-scenarios-api/
-
-## How to Transform CSV data:
-
-# Questions and Answers API
+# Rating and Reviews API
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 
 ## Overview: 
-Questions and Answers microservice built to serve questions and answers section of an e-commerce website. The microservice can currently:
-- List questions for a product
-- List answers for a question
-- Post questions for a product
-- Update questions and answers to show if users find them helpful
-- Update questions and answers to show if users reported them
+Rating and Reviews microservice built to serve ratings and reviews section of an e-commerce website. The microservice can currently:
+- Get reviews of a given product id
+Under development:
+- Get review metadata associated with a product (WORK IN PROGRESS)
+- Post a reviews for a product (WORK IN PROGRESS)
+- Update review to show if users find them helpful (WORK IN PROGRESS)
+- Update review and answers to show if users reported them (WORK IN PROGRESS)
 
 
 ## Setup
 1. Clone down this repo
-1. Make sure to install any dependency using `` npm install ``
-1. Turn on the microservice using `` npm run server ``
+2. Make sure to install any dependency using `` npm install ``
+3. In VS Code, ``CTRL/CMD + SHFT + F`` and type FILL_ME_IN to fill in fields
+4. Turn on the microservice using `` npm run server ``
+5. CD to the serverAPI directory, and run "bash init.sh". 
+6. _You should be able to connect to the url without including :3000, be it localhost or IP._
+
 
 ## Endpoints
 
-### List Quesitons
-| HTTP Request | Endpoint | Description |
-|--------------|-----------|-------------|
-| GET | `` /api/qa/quesitons/:product_id `` | Returns questions, answers, and photos associated with a Product |
+### List Reviews
+Returns a list of reviews for a particular product.  This list *does not* include any reported reviews.
 
- #### Parameters
- | Parameter | Type | Description |
- |-----------|------|-------------|
- | product_id | Number | ID of the product for which to recieve questions |
+`GET /reviews/`
 
- #### Body parameters
- | Parameter | Type | Description |
- |-----------|------|-------------|
- | page | Number | Input what page answers should be selected from. Default = 1 |
- | Count | Number | Input how many Questions are desired. Default = 5 |
- 
- #### Example:
-  ##### Request: `` /api/qa/questions/7 ``
-  ##### Response:
- ```
+QueryParameters
+
+| Parameter  | Type    | Description                                                  |
+| ---------- | ------- | ------------------------------------------------------------ |
+| page       | integer | Selects the page of results to return.  Default 1.           |
+| count      | integer | Specifies how many results per page to return. Default 5.    |
+| sort       | text    | Changes the sort order of reviews to be based on "newest", "helpful", or "relevant" |
+| product_id | integer | Specifies the product for which to retrieve reviews.         |
+
+Response
+
+`Status: 200 OK `
+
+```json
 {
-    "product_id": "7",
-    "results": [
-        {
-            "question_id": 41,
-            "question_body": "What fabric is the top made of?",
-            "question_date": "2020-09-05T09:19:08-07:00",
-            "asker_name": "coolkid",
-            "reported": false,
-            "question_helpfulness": 9,
-            "answers": {
-                "81": {
-                    "id": 81,
-                    "body": "Suede",
-                    "date": "2021-02-08T12:07:08-08:00",
-                    "answerer_name": "warmkid",
-                    "helpfullness": 0,
-                    "photos": [
-                        {
-                            "id": 17,
-                            "url": "https://images.unsplash.com/photo-1548430395-ec39eaf2aa1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1974&q=80"
-                        }
-                    ]
-                },
-                "82": {
-                    "id": 82,
-                    "body": "Something pretty soft but I can't be sure",
-                    "date": "2020-11-21T21:27:23-08:00",
-                    "answerer_name": "warmkid",
-                    "helpfullness": 1,
-                    "photos": []
-                },
-                "93": {
-                    "id": 93,
-                    "body": "Its the best! Seriously magic fabric",
-                    "date": "2021-02-21T21:19:34-08:00",
-                    "answerer_name": "warmkid",
-                    "helpfullness": 1,
-                    "photos": []
-                },
-                "94": {
-                    "id": 94,
-                    "body": "Supposedly suede, but I think its synthetic",
-                    "date": "2021-03-02T06:17:15-08:00",
-                    "answerer_name": "warmkid",
-                    "helpfullness": 2,
-                    "photos": []
-                }
-            }
+  "product": "2",
+  "page": 0,
+  "count": 5,
+  "results": [
+    {
+      "review_id": 5,
+      "rating": 3,
+      "summary": "I'm enjoying wearing these shades",
+      "recommend": false,
+      "response": null,
+      "body": "Comfortable and practical.",
+      "date": "2019-04-14T00:00:00.000Z",
+      "reviewer_name": "shortandsweeet",
+      "helpfulness": 5,
+      "photos": [{
+          "id": 1,
+          "url": "urlplaceholder/review_5_photo_number_1.jpg"
         },
         {
-            "question_id": 43,
-            "question_body": "Why is this product cheaper here than other sites?",
-            "question_date": "2020-09-05T09:19:08-07:00",
-            "asker_name": "l33tgamer",
-            "reported": false,
-            "question_helpfulness": 5,
-            "answers": {}
+          "id": 2,
+          "url": "urlplaceholder/review_5_photo_number_2.jpg"
         },
-        {
-            "question_id": 42,
-            "question_body": "How long does it last?",
-            "question_date": "2020-06-09T16:43:00-07:00",
-            "asker_name": "jbilas",
-            "reported": true,
-            "question_helpfulness": 0,
-            "answers": {}
-        }
-    ]
+        // ...
+      ]
+    },
+    {
+      "review_id": 3,
+      "rating": 4,
+      "summary": "I am liking these glasses",
+      "recommend": false,
+      "response": "Glad you're enjoying the product!",
+      "body": "They are very dark. But that's good because I'm in very sunny spots",
+      "date": "2019-06-23T00:00:00.000Z",
+      "reviewer_name": "bigbrotherbenjamin",
+      "helpfulness": 5,
+      "photos": [],
+    },
+    // ...
+  ]
 }
- ```
-# 
+```
 
-### List Answers
-| HTTP Request | Endpoint | Description |
-|--------------|-----------|-------------|
-| GET | `` /api/qa/quesitons/:question_id/answers `` | Returns answers, and photos associated with a Question |
 
- #### Parameters
- | Parameter | Type | Description |
- |-----------|------|-------------|
- | question_id | Number | ID of the question for which to retrieve answers |
 
- #### Body parameters
- | Parameter | Type | Description |
- |-----------|------|-------------|
- | page | Number | Input what page answers should be selected from. Default = 1 |
- | count | Number | Input how many Questions are desired. Default = 5 |
- 
- #### Example:
-  ##### Request: `` /api/qa/questions/1/answers ``
-  ##### Response:
- ```
+### Get Review Metadata
+
+Returns review metadata for a given product.
+
+`GET /reviews/meta`
+
+Query Parameters
+
+| Parameter  | Type    | Description                                                  |
+| ---------- | ------- | ------------------------------------------------------------ |
+| product_id | integer | Required ID of the product for which data should be returned |
+
+Response
+
+`Status: 200 OK `
+
+```json
 {
-    "question": "1",
-    "page": 0,
-    "count": 5,
-    "results": [
-        {
-            "answer_id": 8,
-            "body": "DONT BUY IT! It's bad for the environment",
-            "date": "2020-09-19T21:49:22.000Z",
-            "answerer_name": "metslover",
-            "helpful": 8,
-            "photos": []
-        },
-        {
-            "answer_id": 7,
-            "body": "Its the best! Seriously magic fabric",
-            "date": "2021-02-27T18:45:24.000Z",
-            "answerer_name": "metslover",
-            "helpful": 7,
-            "photos": []
-        },
-        {
-            "answer_id": 57,
-            "body": "Suede",
-            "date": "2021-04-11T16:51:31.000Z",
-            "answerer_name": "metslover",
-            "helpful": 7,
-            "photos": []
-        },
-        {
-            "answer_id": 5,
-            "body": "Something pretty soft but I can't be sure",
-            "date": "2020-09-13T09:49:20.000Z",
-            "answerer_name": "metslover",
-            "helpful": 5,
-            "photos": [
-                {
-                    "url": "https://images.unsplash.com/photo-1530519729491-aea5b51d1ee1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80",
-                    "id": 1
-                },
-                {
-                    "url": "https://images.unsplash.com/photo-1511127088257-53ccfcc769fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
-                    "id": 2
-                },
-                {
-                    "url": "https://images.unsplash.com/photo-1500603720222-eb7a1f997356?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1653&q=80",
-                    "id": 3
-                }
-            ]
-        },
-        {
-            "answer_id": 95,
-            "body": "Supposedly suede, but I think its synthetic",
-            "date": "2020-09-14T21:53:52.000Z",
-            "answerer_name": "metslover",
-            "helpful": 3,
-            "photos": []
-        }
-    ]
+  "product_id": "2",
+  "ratings": {
+    2: 1,
+    3: 1,
+    4: 2,
+    // ...
+  },
+  "recommended": {
+    0: 5
+    // ...
+  },
+  "characteristics": {
+    "Size": {
+      "id": 14,
+      "value": "4.0000"
+    },
+    "Width": {
+      "id": 15,
+      "value": "3.5000"
+    },
+    "Comfort": {
+      "id": 16,
+      "value": "4.0000"
+    },
+    // ...
 }
- ```
-  # 
-  
-### Add a Question
-| HTTP Request | Endpoint | Description |
-|--------------|-----------|-------------|
-| POST | `` /api/qa/quesitons/ `` | Returns questions, answers, and photos associated with a Product |
+```
 
- #### Payload
- | Parameter | Type | Description |
- |-----------|------|-------------|
- | body | text | Text of question being asked |
- | name | text | Question asker's username|
- | email | text | Question asker's email |
- | product_id | text | Product for which the question is posted |
- 
-response: `` 201 ``
 
-# 
 
-### Mark a Questions as Helpful
-| HTTP Request | Endpoint | Description |
-|--------------|-----------|-------------|
-| PUT | `` /api/qa/quesitons/:question_id/helpful `` | Updates question to indicate that user found it helpful |
+### Add a Review
 
- #### Parameters
- | Parameter | Type | Description |
- |-----------|------|-------------|
- | question_id | Number | ID of the question to update |
+Adds a review for the given product.
 
-Response: `` 204 ``
-# 
+`POST /reviews`
 
-### Mark an Answer as Helpful
-| HTTP Request | Endpoint | Description |
-|--------------|-----------|-------------|
-| PUT | `` /api/qa/answers/:answer_id/helpful `` | Updates answer to indicate that user found it helpful |
+Body Parameters
 
- #### Parameters
- | Parameter | Type | Description |
- |-----------|------|-------------|
- | answer_id | Number | ID of the answer to update |
+| Parameter       | Type   | Description                                                  |
+| --------------- | ------ | ------------------------------------------------------------ |
+| product_id      | integer| Required ID of the product to post the review for            |
+| rating          | int    | Integer (1-5) indicating the review rating                   |
+| summary         | text   | Summary text of the review                                   |
+| body            | text   | Continued or full text of the review                         |
+| recommend       | bool   | Value indicating if the reviewer recommends the product      |
+| name            | text   | Username for question asker                                  |
+| email           | text   | Email address for question asker                             |
+| photos          | [text] | Array of text urls that link to images to be shown           |
+| characteristics | object | Object of keys representing characteristic_id and values representing the review value for that characteristic. { "14": 5, "15": 5 //...}|
 
-Response: `` 204 ``
-# 
+Response
 
-### Report a Question
-| HTTP Request | Endpoint | Description |
-|--------------|-----------|-------------|
-| PUT | `` /api/qa/quesitons/:question_id/report `` | Updates question to indicate that user reported question |
+`Status: 201 CREATED `
 
- #### Parameters
- | Parameter | Type | Description |
- |-----------|------|-------------|
- | question_id | Number | ID of the question to update |
+### Mark Review as Helpful
 
-Response: `` 204 ``
-# 
+Updates a review to show it was found helpful.
 
-### Report an Answer
-| HTTP Request | Endpoint | Description |
-|--------------|-----------|-------------|
-| PUT | `` /api/qa/answers/:answer_id/report `` | Updates answer to indicate that user reported answer |
+`PUT /reviews/:review_id/helpful`
 
- #### Parameters
- | Parameter | Type | Description |
- |-----------|------|-------------|
- | answer_id | Number | ID of the answer to update |
+Parameters
 
-Response: `` 204 ``
-# 
+| Parameter | Type    | Description                         |
+| --------- | ------- | ----------------------------------- |
+| reveiw_id | integer | Required ID of the review to update |
 
-### Future Updates
-- Add endpoint to post an answer (and photos for said answer) for any question desired
+Response
+
+`Status: 204 NO CONTENT `
+
+
+
+### Report Review
+
+Updates a review to show it was reported. Note, this action does not delete the review, but the review will not be returned in the above GET request.
+
+`PUT /reviews/:review_id/report`
+
+Parameters
+
+| Parameter | Type    | Description                         |
+| --------- | ------- | ----------------------------------- |
+| review_id | integer | Required ID of the review to update |
+
+Response
+
+`Status: 204 NO CONTENT `
